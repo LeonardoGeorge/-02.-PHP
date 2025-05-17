@@ -1,4 +1,7 @@
 <?php
+    define('IDADE_APOSENTADORIA_HOMEM', 65);
+    define('IDADE_APOSENTADORIA_MULHER', 62);
+
     $nome = "Leonardo George";  
     $idade = 28;
     $sexo = "M";
