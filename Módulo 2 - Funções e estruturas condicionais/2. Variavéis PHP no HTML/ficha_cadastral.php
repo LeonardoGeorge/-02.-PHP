@@ -1,11 +1,13 @@
 <?php
-// Definindo variáveis
+    // Definindo constantes para idade de aposentadoria
     $idade_aposentadoria_homem = 65;
     $idade_aposentadoria_mulher = 62;
 
+    // Definindo constantes para idade de aposentadoria
     define('IDADE_APOSENTADORIA_HOMEM', 65);
     define('IDADE_APOSENTADORIA_MULHER', 62);
 
+    // Definindo variáveis
     $nome = "Leonardo George";  
     $idade = 28;
     $sexo = "M";
@@ -13,6 +15,10 @@
     $salario_anual = $salario_mensal * 12;  
     $status_emprego = true;
     $habilidades = array("PHP", "JavaScript", "HTML", "CSS");
+    
+    // Verificando se o usuário é masculino ou feminino... 
+    // Calculando os anos restantes para aposentadoria...
+    // Definindo a variável $anos_necessarios_para_aposentadoria.    
     $anos_necessarios_para_aposentadoria = 0;
     if ($sexo == "M") {
         $anos_necessarios_para_aposentadoria = IDADE_APOSENTADORIA_HOMEM - $idade;
@@ -22,7 +28,7 @@
         echo "Sexo inválido";
     }
      
-
+    // Verificando se o usuário está empregado ou desempregado
      $situacao_emprego = null;
      if ($status_emprego) {
         $situacao_emprego = "Empregado";
@@ -30,12 +36,11 @@
         echo "Desempregado";
     }
 
-
-    
 ?>
 
 
 
+// Exibição de informações em HTML 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -87,18 +92,14 @@
     <div class="container">
         <div class="card">
             <h1>Ficha Cadastral</h1>
-            <p>Nome: <strong><?php echo $nome ?></strong></p>
-            <p>Idade: <strong><?php echo $idade ?></strong></p>
-            <p>Sexo: <strong><?php echo $sexo ?></strong></p>
-            <p>Salário Mensal: <strong><?php echo $salario_mensal ?></strong></p>
-            <p>Salário Anual: <strong><?php echo $salario_anual ?></strong></p>
-            <p>Status de Emprego: <strong><?php
-                echo $situacao_emprego;
-             ?></strong></p>
-            <p>Anos para Aposentadoria: <strong><?php echo  $anos_necessarios_para_aposentadoria ?></strong></p>
-            <p>Habilidades: <strong><?php 
-               echo implode(",  ", $habilidades);
-             ?></strong></p>
+            <p>Nome: <strong><?=  $nome ?></strong></p>
+            <p>Idade: <strong><?= $idade ?></strong></p>
+            <p>Sexo: <strong><?= $sexo ?></strong></p>
+            <p>Salário Mensal: <strong><?= $salario_mensal ?></strong></p>
+            <p>Salário Anual: <strong><?= $salario_anual ?></strong></p>
+            <p>Status de Emprego: <strong><?= $situacao_emprego ?></strong></p>
+            <p>Anos para Aposentadoria: <strong><?= $anos_necessarios_para_aposentadoria ?></strong></p>
+            <p>Habilidades: <strong><?= implode(",  ", $habilidades) ?></strong></p>
         </div>
     </div>
 </body>
