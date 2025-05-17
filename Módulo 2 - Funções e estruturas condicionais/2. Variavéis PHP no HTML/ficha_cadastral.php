@@ -4,9 +4,19 @@
     $sexo = "M";
     $salario_mensal = 2210.30;
     $salario_anual = $salario_mensal * 12;  
-    $status_emprego = true; // true para empregado, false para desempregado 
+    $status_emprego = true;
     $anos_aposentadoria = 40; // anos restantes para aposentadoria
     $habilidades = array("PHP", "JavaScript", "HTML", "CSS"); // habilidades do usuário
+
+     $situacao_emprego = null;
+     if ($status_emprego) {
+        $situacao_emprego = "Empregado";
+    } else {
+        echo "Desempregado";
+    }
+
+
+    
 ?>
 
 
@@ -75,19 +85,9 @@
             <p>Salário Mensal: <strong><?php echo $salario_mensal ?></strong></p>
             <p>Salário Anual: <strong><?php echo $salario_anual ?></strong></p>
             <p>Status de Emprego: <strong><?php
-                if ($status_emprego == true) {
-                    echo "Empregado";
-                } else {
-                    echo "Desempregado";
-                }       
+                echo $situacao_emprego;
              ?></strong></p>
-            <p>Anos para Aposentadoria: <strong><?php 
-                if ($anos_aposentadoria > 0) {
-                    echo $anos_aposentadoria;
-                } else {
-                    echo "Já aposentado";
-                }
-            ?></strong></p>
+            <p>Anos para Aposentadoria: <strong><?php echo $anos_aposentadoria ?></strong></p>
             <p>Habilidades: <strong><?php 
                echo implode(",  ", $habilidades);
              ?></strong></p>
