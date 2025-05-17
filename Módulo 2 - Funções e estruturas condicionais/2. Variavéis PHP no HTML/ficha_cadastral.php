@@ -38,9 +38,7 @@
 
 ?>
 
-
-
-// Exibição de informações em HTML 
+<!-- Exibição de informações em HTML. -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
