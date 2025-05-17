@@ -8,8 +8,16 @@
     $salario_mensal = 2210.30;
     $salario_anual = $salario_mensal * 12;  
     $status_emprego = true;
-    $anos_aposentadoria = 40; // anos restantes para aposentadoria
-    $habilidades = array("PHP", "JavaScript", "HTML", "CSS"); // habilidades do usuário
+    $habilidades = array("PHP", "JavaScript", "HTML", "CSS");
+    $anos_necessarios_para_aposentadoria = 0;
+    if ($sexo == "M") {
+        $anos_necessarios_para_aposentadoria = IDADE_APOSENTADORIA_HOMEM - $idade;
+    } else if ($sexo == "F") {
+        $anos_necessarios_para_aposentadoria = IDADE_APOSENTADORIA_MULHER - $idade;
+    } else {
+        echo "Sexo inválido";
+    }
+     
 
      $situacao_emprego = null;
      if ($status_emprego) {
