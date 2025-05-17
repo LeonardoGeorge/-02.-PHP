@@ -1,16 +1,16 @@
 <?php
-$nome = "Leonardo George";  
-$idade = 25;
-$sexo = "M";
-$salario_mensal = 2210.30;
-$salario_anual = $salario_mensal * 12;  
-$status_emprego = true; // true para empregado, false para desempregado 
-$anos_aposentadoria = 40; // anos restantes para aposentadoria
-$habilidades = array("PHP", "JavaScript", "HTML", "CSS"); // habilidades do usuário
+    $nome = "Leonardo George";  
+    $idade = 28;
+    $sexo = "M";
+    $salario_mensal = 2210.30;
+    $salario_anual = $salario_mensal * 12;  
+    $status_emprego = true; // true para empregado, false para desempregado 
+    $anos_aposentadoria = 40; // anos restantes para aposentadoria
+    $habilidades = array("PHP", "JavaScript", "HTML", "CSS"); // habilidades do usuário
 ?>
 
 
-<!-- HTML para exibir as informações -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -62,14 +62,35 @@ $habilidades = array("PHP", "JavaScript", "HTML", "CSS"); // habilidades do usu�
     <div class="container">
         <div class="card">
             <h1>Ficha Cadastral</h1>
-            <p>Nome: <?php echo $nome; ?></p>
-            <p>Idade: <strong>25</strong></p>
-            <p>Sexo: <strong><?php echo $sexo ?></strong></p>
-            <p>Salário Mensal: <strong>2.210,30</strong></p>
-            <p>Salário Anual: <?php echo $salario_anual ?> </p>
-            <p>Status de Emprego: <strong> <?php echo $status_emprego ?></strong></p>
-            <p>Anos para Aposentadoria: <strong><?php echo $anos_aposentadoria ?> </strong></p>
-            <p>Habilidades: <strong><?php echo $habilidades ?></strong></p>
+            <p>Nome: <strong><?php echo $nome ?></strong></p>
+            <p>Idade: <strong><?php echo $idade ?></strong></p>
+            <p>Sexo: <strong><?php 
+                if ($sexo == "M") {
+                    echo "Masculino";                    
+                } else if ($sexo == "F") {
+                    echo "Feminino";
+                } else {
+                    echo "Outro";
+                }?></strong></p>
+            <p>Salário Mensal: <strong><?php echo $salario_mensal ?></strong></p>
+            <p>Salário Anual: <strong><?php echo $salario_anual ?></strong></p>
+            <p>Status de Emprego: <strong><?php
+                if ($status_emprego == true) {
+                    echo "Empregado";
+                } else {
+                    echo "Desempregado";
+                }       
+             ?></strong></p>
+            <p>Anos para Aposentadoria: <strong><?php 
+                if ($anos_aposentadoria > 0) {
+                    echo $anos_aposentadoria;
+                } else {
+                    echo "Já aposentado";
+                }
+            ?></strong></p>
+            <p>Habilidades: <strong><?php 
+               echo implode(",  ", $habilidades);
+             ?></strong></p>
         </div>
     </div>
 </body>
