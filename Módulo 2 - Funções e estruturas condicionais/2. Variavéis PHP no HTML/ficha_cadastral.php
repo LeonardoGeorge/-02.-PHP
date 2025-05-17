@@ -1,4 +1,8 @@
 <?php
+// Definindo variáveis
+    $idade_aposentadoria_homem = 65;
+    $idade_aposentadoria_mulher = 62;
+
     define('IDADE_APOSENTADORIA_HOMEM', 65);
     define('IDADE_APOSENTADORIA_MULHER', 62);
 
@@ -85,20 +89,13 @@
             <h1>Ficha Cadastral</h1>
             <p>Nome: <strong><?php echo $nome ?></strong></p>
             <p>Idade: <strong><?php echo $idade ?></strong></p>
-            <p>Sexo: <strong><?php 
-                if ($sexo == "M") {
-                    echo "Masculino";                    
-                } else if ($sexo == "F") {
-                    echo "Feminino";
-                } else {
-                    echo "Outro";
-                }?></strong></p>
+            <p>Sexo: <strong><?php echo $sexo ?></strong></p>
             <p>Salário Mensal: <strong><?php echo $salario_mensal ?></strong></p>
             <p>Salário Anual: <strong><?php echo $salario_anual ?></strong></p>
             <p>Status de Emprego: <strong><?php
                 echo $situacao_emprego;
              ?></strong></p>
-            <p>Anos para Aposentadoria: <strong><?php echo $anos_aposentadoria ?></strong></p>
+            <p>Anos para Aposentadoria: <strong><?php echo  $anos_necessarios_para_aposentadoria ?></strong></p>
             <p>Habilidades: <strong><?php 
                echo implode(",  ", $habilidades);
              ?></strong></p>
