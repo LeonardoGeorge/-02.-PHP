@@ -1,13 +1,10 @@
 <?php
-    // Definindo constantes para idade de aposentadoria
     $idade_aposentadoria_homem = 65;
     $idade_aposentadoria_mulher = 62;
-
-    // Definindo constantes para idade de aposentadoria
+    
     define('IDADE_APOSENTADORIA_HOMEM', 65);
     define('IDADE_APOSENTADORIA_MULHER', 62);
-
-    // Definindo variáveis
+ 
     $nome = "Leonardo George";  
     $idade = 28;
     $sexo = "M";
@@ -16,12 +13,8 @@
     $status_emprego = false;
     $habilidades = array("PHP", "JavaScript", "HTML", "CSS");
     
-
-    // Verificando se o usuário está empregado ou desempregado!
-    // Operador Ternário no PHP! 
     $situacao_emprego = $status_emprego === true ? "Empregado" : "Desempregado";
   
-
     // Verificando se o usuário é masculino ou feminino... 
     // Calculando os anos restantes para aposentadoria...
     // Definindo a variável $anos_necessarios_para_aposentadoria.    
