@@ -13,9 +13,15 @@
     $sexo = "M";
     $salario_mensal = 2210.30;
     $salario_anual = $salario_mensal * 12;  
-    $status_emprego = true;
+    $status_emprego = false;
     $habilidades = array("PHP", "JavaScript", "HTML", "CSS");
     
+
+    // Verificando se o usuário está empregado ou desempregado!
+    // Operador Ternário no PHP! 
+    $situacao_emprego = $status_emprego === true ? "Empregado" : "Desempregado";
+  
+
     // Verificando se o usuário é masculino ou feminino... 
     // Calculando os anos restantes para aposentadoria...
     // Definindo a variável $anos_necessarios_para_aposentadoria.    
@@ -28,13 +34,7 @@
         echo "Sexo inválido";
     }
      
-    // Verificando se o usuário está empregado ou desempregado
-     $situacao_emprego = null;
-     if ($status_emprego) {
-        $situacao_emprego = "Empregado";
-    } else {
-        echo "Desempregado";
-    }
+  
 
 ?>
 
