@@ -6,7 +6,9 @@
     <title>Inclusão de arquivos</title>
 </head>
 <body>
-    <h1>Hello word!</h1> <br>
-    <h3>I'm <?= $name ?></h3>
+    // Incluindo o arquivo name.php
+    <?php include 'name.php'; ?>
+    <h1>Hello word!</h1> 
+    <h2>I'm <?= $name ?></h2>
 </body>
 </html>
