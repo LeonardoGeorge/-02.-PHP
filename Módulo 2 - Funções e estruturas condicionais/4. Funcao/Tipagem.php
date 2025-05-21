@@ -1,4 +1,10 @@
 <?php 
+
+// Tipos de tipagem int, float, string, bool
+// Tipagem forte: PHP não faz conversão automática de tipos
+// Tipagem fraca: PHP faz conversão automática de tipos
+// Tipagem dinâmica: PHP não exige a declaração do tipo de variável
+// Tipagem estática: PHP exige a declaração do tipo de variável
 function calcularIMC(float $peso, float $altura): string {
     // Calculo do IMC
         return $imc = $peso / ($altura * $altura);
